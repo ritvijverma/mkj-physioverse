@@ -26,22 +26,28 @@ export default function AboutMentor() {
     <section id="about" className="bg-white py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          
+
           {/* Image / Profile Area */}
           <div className="relative mx-auto w-full max-w-lg">
-            <div className="aspect-[4/5] overflow-hidden rounded-[2rem] bg-gradient-to-br from-blue-100 via-slate-100 to-blue-50 p-8">
-              <div className="flex h-full flex-col items-center justify-center rounded-3xl border border-blue-100 bg-white/70 text-center">
-                <div className="flex h-24 w-24 items-center justify-center rounded-full bg-[#0B1F3A] text-3xl font-bold text-white">
-                  MY
+            <div className="aspect-[4/5] overflow-hidden rounded-[2rem] bg-gradient-to-br from-blue-100 via-slate-100 to-blue-50 p-3 sm:p-5">
+              <div className="relative h-full overflow-hidden rounded-[1.5rem] bg-slate-100">
+
+                <img
+                  src="https://ik.imagekit.io/ritvij/mandeep-mkj/img_mandeep_01.png"
+                  alt="Dr. Mandeep Yadav - Physiotherapist and Mentor"
+                  className="h-full w-full object-cover object-center"
+                />
+
+                {/* Bottom Gradient */}
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0B1F3A]/80 via-[#0B1F3A]/20 to-transparent px-6 pb-6 pt-20">
+                  <p className="text-sm font-medium text-white/80">
+                    Dr. Mandeep Yadav, PT
+                  </p>
+
+                  <p className="mt-1 text-lg font-bold text-white">
+                    Physiotherapist & Mentor
+                  </p>
                 </div>
-
-                <h3 className="mt-5 text-xl font-bold text-[#0B1F3A]">
-                  Dr. Mandeep Yadav
-                </h3>
-
-                <p className="mt-2 text-sm text-slate-500">
-                  Physiotherapist & Mentor
-                </p>
               </div>
             </div>
 
@@ -88,7 +94,7 @@ export default function AboutMentor() {
                 return (
                   <div
                     key={item.title}
-                    className="rounded-2xl border border-slate-200 bg-[#F8FAFC] p-5"
+                    className="rounded-2xl border border-slate-200 bg-[#F8FAFC] p-5 transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-md"
                   >
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
                       <Icon size={20} />
@@ -106,6 +112,7 @@ export default function AboutMentor() {
               })}
             </div>
           </div>
+
         </div>
       </div>
     </section>

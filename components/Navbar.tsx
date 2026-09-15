@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -23,21 +24,25 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
-        
-        {/* Logo */}
-        <Link
-          href="/#home"
-          onClick={handleLinkClick}
-          className="flex flex-col leading-none"
-        >
-          <span className="text-xl font-extrabold tracking-tight text-[#0B1F3A]">
-            MKJ
-          </span>
 
-          <span className="mt-1 text-xs font-bold tracking-[0.25em] text-blue-600">
-            PHYSIOVERSE
-          </span>
-        </Link>
+        {/* Logo */}
+     <Link
+  href="/#home"
+  onClick={handleLinkClick}
+  className="flex items-center"
+  aria-label="MKJ Physioverse Home"
+>
+  <div className="relative h-14 w-16 overflow-hidden sm:h-16 sm:w-[72px]">
+    <Image
+      src="https://ik.imagekit.io/ritvij/mandeep-mkj/Logo.PNG"
+      alt="MKJ Physioverse"
+      fill
+      priority
+      sizes="72px"
+      className="scale-[1.8] object-contain"
+    />
+  </div>
+</Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-8 lg:flex">
