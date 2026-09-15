@@ -177,20 +177,26 @@ export default function Programs() {
               </div>
 
               {/* Button */}
-              <a
-                href="https://wa.me/916306214402"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`mt-7 flex items-center justify-center gap-2 rounded-xl px-5 py-3.5 text-sm font-semibold transition ${
-                  program.popular
-                    ? "bg-white text-[#0B1F3A] hover:bg-blue-50"
-                    : "bg-[#0B1F3A] text-white hover:bg-blue-700"
-                }`}
-              >
-                {program.price ? "Get Started" : "Enquire Now"}
+             <a
+  href={`https://wa.me/916306214402?text=${encodeURIComponent(
+    `Hi Dr. Mandeep, I'm interested in the ${program.title}${
+      program.price ? ` (₹${program.price})` : ""
+    }.
 
-                <ArrowRight size={17} />
-              </a>
+I'd like to know more about the program and the next steps.`
+  )}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className={`mt-7 flex items-center justify-center gap-2 rounded-xl px-5 py-3.5 text-sm font-semibold transition ${
+    program.popular
+      ? "bg-white text-[#0B1F3A] hover:bg-blue-50"
+      : "bg-[#0B1F3A] text-white hover:bg-blue-700"
+  }`}
+>
+  {program.price ? "Get Started" : "Enquire Now"}
+
+  <ArrowRight size={17} />
+</a>
             </article>
           ))}
         </div>
