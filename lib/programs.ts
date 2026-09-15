@@ -1,75 +1,115 @@
 export const programs = [
   {
-    id: "career-guidance",
-    title: "Career Guidance",
-    shortDescription:
-      "Understand the overall pathway and important steps involved in building your physiotherapy career in Germany.",
+    id: "basic-discovery",
+    title: "Basic Discovery Session",
+    subtitle: "20–30 Minute 1-on-1 Strategy Call",
+    price: 299,
 
     description:
-      "A structured guidance program designed to help physiotherapists understand the professional pathway and important steps involved in preparing for a career in Germany.",
-
-    duration: "To be discussed",
-
-    idealFor:
-      "Physiotherapists who are beginning their journey and want a clear understanding of the overall process.",
+      "Perfect for physiotherapists who want a clear roadmap to build their career in Germany before investing time and money.",
 
     features: [
-      "Overview of the Germany physiotherapy pathway",
-      "Understanding the recognition process",
-      "German language guidance",
-      "Documentation overview",
-      "Career preparation guidance",
+      "Personal 1-on-1 Zoom consultation",
+      "Complete assessment of your profile and eligibility",
+      "Personalized Germany career roadmap",
+      "Step-by-step guidance based on your current stage",
+      "Live Q&A to clear all your doubts",
     ],
+
+    outcome:
+      "Leave the session with complete clarity on your next steps, avoiding costly mistakes and unnecessary delays.",
+
+    idealFor:
+      "Physiotherapists who want a clear roadmap before investing time and money.",
+
+    duration: "20–30 Minutes",
 
     popular: false,
   },
 
   {
-    id: "one-to-one-mentorship",
-    title: "1-to-1 Mentorship",
-    shortDescription:
-      "Get personalised guidance based on your current qualification, experience and professional goals.",
+    id: "language-foundation",
+    title: "Language Foundation Kickstart",
+    subtitle: "30-Minute Mentorship + Language Starter Kit",
+    price: 399,
 
     description:
-      "A personalised mentorship experience designed for physiotherapists who want focused guidance based on their individual background, qualifications and career goals.",
-
-    duration: "To be discussed",
-
-    idealFor:
-      "Physiotherapists looking for personalised guidance and the opportunity to discuss their individual journey.",
+      "Perfect for candidates ready to begin their German language journey with the right strategy from Day 1.",
 
     features: [
-      "Personalised guidance",
-      "Individual career discussion",
-      "Personalised roadmap",
-      "Question and answer session",
-      "Practical insights",
+      "Everything from the Basic Discovery Session",
+      "A1 and A2 study notes and e-books",
+      "Language learning strategy video",
+      "Documentation process guidance",
+      "3 follow-up mentoring calls",
     ],
+
+    outcome:
+      "Build a strong language foundation with a structured learning plan and expert guidance.",
+
+    idealFor:
+      "Candidates who are ready to begin their German language journey with the right strategy.",
+
+    duration: "30-Minute Mentorship",
 
     popular: true,
   },
 
   {
-    id: "complete-mentorship",
-    title: "Complete Mentorship",
-    shortDescription:
-      "Structured support and guidance for understanding different stages of your professional journey.",
+    id: "a1-b1-success",
+    title: "A1–B1 Success Program",
+    subtitle: "Complete Language & Career Preparation",
+    price: 499,
 
     description:
-      "A comprehensive mentorship option designed to provide structured guidance and practical insights throughout the important stages of your professional journey towards Germany.",
-
-    duration: "To be discussed",
-
-    idealFor:
-      "Physiotherapists who want more comprehensive guidance throughout their career preparation journey.",
+      "Perfect for physiotherapists committed to achieving B1 level and preparing professionally for Germany.",
 
     features: [
-      "Everything in Career Guidance",
-      "Personalised mentorship sessions",
-      "Step-by-step roadmap",
-      "Practical guidance",
-      "Continued mentorship support",
+      "Everything from the Language Foundation Package",
+      "Complete A1–B1 study material",
+      "10 personalized follow-up mentoring sessions",
+      "TELC B1 model papers",
+      "Europass CV preparation",
+      "Interview preparation guidance",
     ],
+
+    outcome:
+      "Gain the language skills, confidence, and professional documents needed to move closer to your Germany dream.",
+
+    idealFor:
+      "Physiotherapists committed to achieving B1 level and preparing professionally for Germany.",
+
+    duration: "A1–B1 Preparation",
+
+    popular: false,
+  },
+
+  {
+    id: "premium-one-year",
+    title: "Premium 1-Year Mentorship",
+    subtitle: "Dr. Mandeep's Signature Mentorship Program",
+    price: null,
+
+    description:
+      "Perfect for physiotherapists who want complete guidance from planning to landing their career in Germany.",
+
+    features: [
+      "Personalized roadmap from start to finish",
+      "Unlimited calls throughout the program",
+      "Regular live mentoring sessions",
+      "Complete recorded mentorship videos",
+      "B1 & B2 TELC model papers",
+      "Professionally crafted German CV & Cover Letter",
+      "Continuous motivation, accountability, and career support",
+    ],
+
+    outcome:
+      "A complete mentorship experience with expert guidance, structured learning, and long-term support designed to maximize your chances of success.",
+
+    idealFor:
+      "Physiotherapists who want complete guidance from planning to landing their career in Germany.",
+
+    duration: "1 Year",
 
     popular: false,
   },
