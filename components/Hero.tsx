@@ -3,17 +3,17 @@ import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section
-      id="home"
-      className="relative overflow-hidden bg-[#F8FAFC] pt-16 sm:pt-20"
-    >
+   <section
+  id="home"
+  className="relative overflow-hidden bg-[#F8FAFC] pt-20"
+>
       {/* Background */}
       <div className="absolute left-0 top-0 h-80 w-80 rounded-full bg-blue-100/40 blur-3xl" />
       <div className="absolute right-0 top-20 h-96 w-96 rounded-full bg-blue-100/30 blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl px-5 pb-20 pt-12 sm:px-8 sm:pb-24 lg:px-10 lg:pt-20">
+      <div className="relative mx-auto max-w-7xl px-5 pb-20 pt-8 sm:px-8 sm:pb-24 sm:pt-10 lg:px-10 lg:pt-12">
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-16">
-          
+
           {/* LEFT CONTENT */}
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-4 py-2 text-sm font-medium text-blue-700 shadow-sm">
@@ -66,7 +66,7 @@ export default function Hero() {
           {/* RIGHT PROFILE CARD */}
           <div className="mx-auto w-full max-w-lg">
             <div className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-[0_20px_60px_rgba(15,23,42,0.12)] sm:p-9">
-              
+
               {/* Header */}
               <div className="flex items-center gap-4">
                 {/* Logo Placeholder */}

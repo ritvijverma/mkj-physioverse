@@ -22,25 +22,37 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md">
+<header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md">      
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
 
         {/* Logo */}
-     <Link
+   <Link
   href="/#home"
   onClick={handleLinkClick}
-  className="flex items-center"
+  className="flex items-center gap-3"
   aria-label="MKJ Physioverse Home"
 >
-  <div className="relative h-14 w-16 overflow-hidden sm:h-16 sm:w-[72px]">
+  {/* Logo Icon */}
+  <div className="relative h-12 w-12 overflow-hidden sm:h-14 sm:w-14">
     <Image
       src="https://ik.imagekit.io/ritvij/mandeep-mkj/Logo.PNG"
-      alt="MKJ Physioverse"
+      alt="MKJ Physioverse Logo"
       fill
       priority
-      sizes="72px"
+      sizes="56px"
       className="scale-[1.8] object-contain"
     />
+  </div>
+
+  {/* Brand Name */}
+  <div className="flex flex-col leading-none">
+    <span className="text-lg font-extrabold tracking-tight text-[#0B1F3A] sm:text-xl">
+      MKJ
+    </span>
+
+    <span className="mt-1 text-[10px] font-bold tracking-[0.2em] text-blue-600 sm:text-xs">
+      PHYSIOVERSE
+    </span>
   </div>
 </Link>
 
