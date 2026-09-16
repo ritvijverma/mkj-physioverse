@@ -68,12 +68,12 @@ export default function Navbar() {
             </Link>
           ))}
 
-          <Link
+          {/* <Link
             href="/#contact"
             className="rounded-full bg-[#0B1F3A] px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
           >
             Contact Us
-          </Link>
+          </Link> */}
         </nav>
 
         {/* Mobile Menu Button */}
