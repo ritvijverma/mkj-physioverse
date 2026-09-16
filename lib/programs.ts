@@ -31,7 +31,7 @@ export const programs = [
     id: "language-foundation",
     title: "Language Foundation Kickstart",
     subtitle: "30-Minute Mentorship + Language Starter Kit",
-    price: 399,
+    price: 1499,
 
     description:
       "Perfect for candidates ready to begin their German language journey with the right strategy from Day 1.",
@@ -59,7 +59,7 @@ export const programs = [
     id: "a1-b1-success",
     title: "A1–B1 Success Program",
     subtitle: "Complete Language & Career Preparation",
-    price: 499,
+    price: 2999,
 
     description:
       "Perfect for physiotherapists committed to achieving B1 level and preparing professionally for Germany.",
@@ -88,7 +88,7 @@ export const programs = [
     id: "premium-one-year",
     title: "Premium 1-Year Mentorship",
     subtitle: "Dr. Mandeep's Signature Mentorship Program",
-    price: null,
+    price: 4999,
 
     description:
       "Perfect for physiotherapists who want complete guidance from planning to landing their career in Germany.",
