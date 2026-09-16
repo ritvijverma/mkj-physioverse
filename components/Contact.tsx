@@ -1,8 +1,44 @@
-import { ArrowRight, MessageCircle } from "lucide-react";
+"use client";
+
+import { useEffect, useState } from "react";
+import { MessageCircle } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
 import WhatsAppInquiry from "@/components/WhatsAppInquiry";
 
+const contactPhrase = "Have Questions About Your Journey to Germany?";
+
 export default function Contact() {
+  const [characterCount, setCharacterCount] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [hasRevealedCards, setHasRevealedCards] = useState(false);
+
+  useEffect(() => {
+    const isPhraseComplete = characterCount === contactPhrase.length;
+    const isPhraseEmpty = characterCount === 0;
+    const delay = isPhraseComplete
+      ? 1800
+      : isPhraseEmpty && isDeleting
+        ? 500
+        : isDeleting
+          ? 55
+          : 95;
+
+    const timeoutId = window.setTimeout(() => {
+      if (isPhraseComplete && !isDeleting) {
+        setIsDeleting(true);
+        setHasRevealedCards(true);
+      } else if (isPhraseEmpty && isDeleting) {
+        setIsDeleting(false);
+      } else {
+        setCharacterCount((currentCount) =>
+          currentCount + (isDeleting ? -1 : 1)
+        );
+      }
+    }, delay);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [characterCount, isDeleting]);
+
   return (
     <section id="contact" className="bg-white py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
@@ -13,8 +49,12 @@ export default function Contact() {
               Get in Touch
             </span>
 
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
-              Have Questions About Your Journey to Germany?
+            <h2 className="hero-heading-line mt-4 min-h-[3.15em] text-3xl font-bold tracking-tight text-white sm:min-h-[2.1em] sm:text-4xl lg:min-h-[1.05em] lg:text-5xl">
+              <span className="hero-typewriter-text">
+                {contactPhrase.slice(0, characterCount)}
+              </span>
+              <span className="hero-static-heading-text">{contactPhrase}</span>
+              <span className="hero-typewriter-cursor" aria-hidden="true" />
             </h2>
 
             <p className="mt-6 max-w-xl leading-7 text-slate-300 sm:text-lg">
@@ -31,7 +71,11 @@ export default function Contact() {
           </div>
 
           {/* Contact Cards */}
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div
+            className={`contact-social-cards grid gap-4 sm:grid-cols-2 ${
+              hasRevealedCards ? "is-visible" : ""
+            }`}
+          >
             {/* WhatsApp */}
             <WhatsAppInquiry
               className="group rounded-2xl border border-white/10 bg-white/10 p-6 backdrop-blur-sm transition hover:-translate-y-1 hover:bg-white/15"

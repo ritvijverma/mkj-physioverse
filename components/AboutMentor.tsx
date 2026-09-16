@@ -30,12 +30,12 @@ export default function AboutMentor() {
           {/* Image / Profile Area */}
           <div className="relative mx-auto w-full max-w-lg">
             <div className="aspect-[4/5] overflow-hidden rounded-[2rem] bg-gradient-to-br from-blue-100 via-slate-100 to-blue-50 p-3 sm:p-5">
-              <div className="relative h-full overflow-hidden rounded-[1.5rem] bg-slate-100">
+              <div className="group relative h-full overflow-hidden rounded-[1.5rem] bg-slate-100">
 
                 <img
                   src="https://ik.imagekit.io/ritvij/mandeep-mkj/img_mandeep_01.png"
                   alt="Dr. Mandeep Yadav - Physiotherapist and Mentor"
-                  className="h-full w-full object-cover object-center"
+                  className="h-full w-full object-cover object-center transition duration-700 ease-out group-hover:scale-[1.04]"
                 />
 
                 {/* Bottom Gradient */}
@@ -52,7 +52,7 @@ export default function AboutMentor() {
             </div>
 
             {/* Experience Badge */}
-            <div className="absolute -bottom-5 -right-3 rounded-2xl bg-[#0B1F3A] px-5 py-4 text-white shadow-xl sm:-right-6">
+            <div className="absolute -bottom-5 -right-3 rounded-2xl bg-[#0B1F3A] px-5 py-4 text-white shadow-xl transition duration-300 hover:-translate-y-1 hover:shadow-2xl sm:-right-6">
               <p className="text-xs text-slate-300">
                 Professional Experience
               </p>
@@ -94,9 +94,9 @@ export default function AboutMentor() {
                 return (
                   <div
                     key={item.title}
-                    className="rounded-2xl border border-slate-200 bg-[#F8FAFC] p-5 transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-md"
+                    className="group rounded-2xl border border-slate-200 bg-[#F8FAFC] p-5 transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:bg-white hover:shadow-md"
                   >
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600 transition duration-300 group-hover:scale-105 group-hover:bg-[#0B1F3A] group-hover:text-white">
                       <Icon size={20} />
                     </div>
 

@@ -1,8 +1,48 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import WhatsAppInquiry from "@/components/WhatsAppInquiry";
 
+const heroPhrase = "Physiotherapy Career";
+
 export default function Hero() {
+  const [characterCount, setCharacterCount] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setCharacterCount(heroPhrase.length);
+      setIsDeleting(false);
+      return;
+    }
+
+    const isPhraseComplete = characterCount === heroPhrase.length;
+    const isPhraseEmpty = characterCount === 0;
+    const delay = isPhraseComplete
+      ? 1800
+      : isPhraseEmpty && isDeleting
+        ? 500
+        : isDeleting
+          ? 55
+          : 95;
+
+    const timeoutId = window.setTimeout(() => {
+      if (isPhraseComplete && !isDeleting) {
+        setIsDeleting(true);
+      } else if (isPhraseEmpty && isDeleting) {
+        setIsDeleting(false);
+      } else {
+        setCharacterCount((currentCount) =>
+          currentCount + (isDeleting ? -1 : 1)
+        );
+      }
+    }, delay);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [characterCount, isDeleting]);
+
   return (
    <section
   id="home"
@@ -22,12 +62,16 @@ export default function Hero() {
               Guidance for Physiotherapists
             </div>
 
-            <h1 className="mt-7 text-5xl font-bold leading-[1.05] tracking-tight text-[#0B1F3A] sm:text-6xl lg:text-7xl">
-              Build Your
-              <span className="block text-blue-600">
-                Physiotherapy Career
+            <h1 className="hero-heading mt-7 text-5xl font-bold leading-[1.05] tracking-tight text-[#0B1F3A] sm:text-6xl lg:text-7xl">
+              <span className="hero-heading-line block">Build Your</span>
+              <span className="hero-heading-line hero-heading-type-line block min-h-[2.1em] text-blue-600 sm:min-h-[1.05em]">
+                          <span className="hero-typewriter-text">
+                            {heroPhrase.slice(0, characterCount)}
+                          </span>
+                          <span className="hero-static-heading-text">{heroPhrase}</span>
+                <span className="hero-typewriter-cursor" aria-hidden="true" />
               </span>
-              <span className="block">
+              <span className="hero-heading-line block">
                 in Germany with Clear Guidance.
               </span>
             </h1>
