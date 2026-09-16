@@ -1,5 +1,6 @@
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import WhatsAppInquiry from "@/components/WhatsAppInquiry";
 
 export default function Hero() {
   return (
@@ -51,15 +52,12 @@ export default function Hero() {
                 <ArrowRight size={20} />
               </a>
 
-              <a
-                href="https://wa.me/916306214402"
-                target="_blank"
-                rel="noopener noreferrer"
+              <WhatsAppInquiry
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-6 py-4 font-semibold text-[#0B1F3A] shadow-sm transition hover:border-blue-300 hover:bg-blue-50"
               >
                 <MessageCircle size={20} />
                 Chat on WhatsApp
-              </a>
+              </WhatsAppInquiry>
             </div>
           </div>
 

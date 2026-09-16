@@ -1,5 +1,6 @@
 import { MapPin, MessageCircle } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
+import WhatsAppInquiry from "@/components/WhatsAppInquiry";
 const footerLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
@@ -79,15 +80,12 @@ export default function Footer() {
             </h3>
 
             <div className="mt-5 flex flex-col gap-4">
-              <a
-                href="https://wa.me/916306214402"
-                target="_blank"
-                rel="noopener noreferrer"
+              <WhatsAppInquiry
                 className="flex items-center gap-3 text-sm text-slate-400 transition hover:text-white"
               >
                 <MessageCircle size={18} className="text-blue-400" />
                 WhatsApp
-              </a>
+              </WhatsAppInquiry>
 
               <a
   href="https://www.instagram.com/mkj_physioverse/"

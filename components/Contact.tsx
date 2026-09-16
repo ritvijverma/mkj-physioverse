@@ -1,5 +1,6 @@
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
+import WhatsAppInquiry from "@/components/WhatsAppInquiry";
 
 export default function Contact() {
   return (
@@ -20,25 +21,19 @@ export default function Contact() {
               Connect with MKJ Physioverse to learn more about available
               mentorship and guidance options for physiotherapists.
             </p>
-
-            <a
-              href="https://wa.me/916306214402"
-              target="_blank"
-              rel="noopener noreferrer"
+{/* 
+            <WhatsAppInquiry
               className="mt-8 inline-flex items-center gap-2 rounded-xl bg-white px-6 py-4 font-semibold text-[#0B1F3A] transition hover:-translate-y-1 hover:bg-blue-50"
             >
               Chat on WhatsApp
               <ArrowRight size={19} />
-            </a>
+            </WhatsAppInquiry> */}
           </div>
 
           {/* Contact Cards */}
           <div className="grid gap-4 sm:grid-cols-2">
             {/* WhatsApp */}
-            <a
-              href="https://wa.me/916306214402"
-              target="_blank"
-              rel="noopener noreferrer"
+            <WhatsAppInquiry
               className="group rounded-2xl border border-white/10 bg-white/10 p-6 backdrop-blur-sm transition hover:-translate-y-1 hover:bg-white/15"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-500 text-white">
@@ -56,7 +51,7 @@ export default function Contact() {
               <span className="mt-5 inline-block text-sm font-semibold text-blue-300">
                 Start a conversation →
               </span>
-            </a>
+            </WhatsAppInquiry>
 
             {/* Instagram */}
             <a

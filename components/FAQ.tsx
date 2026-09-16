@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import WhatsAppInquiry from "@/components/WhatsAppInquiry";
 
 const faqs = [
   {
@@ -106,14 +107,11 @@ export default function FAQ() {
             Still have questions?
           </p>
 
-          <a
-            href="https://wa.me/916306214402"
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppInquiry
             className="mt-3 inline-flex font-semibold text-blue-600 transition hover:text-blue-800"
           >
             Ask us on WhatsApp →
-          </a>
+          </WhatsAppInquiry>
         </div>
       </div>
     </section>

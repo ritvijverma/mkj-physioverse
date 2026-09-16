@@ -1,4 +1,5 @@
 import { ArrowRight, MessageCircle } from "lucide-react";
+import WhatsAppInquiry from "@/components/WhatsAppInquiry";
 
 export default function CTA() {
   return (
@@ -30,15 +31,12 @@ export default function CTA() {
             <ArrowRight size={19} />
           </a>
 
-          <a
-            href="https://wa.me/916306214402"
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppInquiry
             className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 py-4 font-semibold text-white backdrop-blur-sm transition hover:bg-white/20"
           >
             <MessageCircle size={20} />
             Chat on WhatsApp
-          </a>
+          </WhatsAppInquiry>
         </div>
       </div>
     </section>

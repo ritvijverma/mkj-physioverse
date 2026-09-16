@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import WhatsAppInquiry from "@/components/WhatsAppInquiry";
 
 const roadmapSteps = [
   {
@@ -86,15 +87,12 @@ export default function Roadmap() {
 
         {/* CTA */}
         <div className="mt-12 text-center">
-          <a
-            href="https://wa.me/916306214402"
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppInquiry
             className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-4 font-semibold text-white shadow-lg shadow-blue-950/30 transition hover:-translate-y-1 hover:bg-blue-500"
           >
             Get Guidance for Your Journey
             <ArrowRight size={19} />
-          </a>
+          </WhatsAppInquiry>
         </div>
       </div>
     </section>

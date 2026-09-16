@@ -1,6 +1,7 @@
 "use client";
 
 import { CheckCircle2, MessageCircle } from "lucide-react";
+import WhatsAppInquiry from "@/components/WhatsAppInquiry";
 
 const programs = [
   {
@@ -144,15 +145,12 @@ export default function ProgramsPage() {
               Not sure which program is right for you?
             </p>
 
-            <a
-              href="https://wa.me/916306214402"
-              target="_blank"
-              rel="noopener noreferrer"
+            <WhatsAppInquiry
               className="mt-3 inline-flex items-center gap-2 font-semibold text-blue-600 hover:text-blue-800"
             >
               <MessageCircle size={18} />
               Chat with us on WhatsApp
-            </a>
+            </WhatsAppInquiry>
           </div>
         </div>
       </section>
